@@ -1,0 +1,14 @@
+.container {
+  background-color: #c4f6f9;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingText {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-family: monospace;
+}
