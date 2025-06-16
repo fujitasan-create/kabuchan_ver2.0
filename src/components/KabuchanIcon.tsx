@@ -5,7 +5,7 @@ type KabuchanIconProps = {
   size?: number;
 };
 
-export default function KabuchanIcon({ emotion = 'default', size = 200 }: KabuchanIconProps) {
+export default function KabuchanIcon({ emotion = 'default', size = 180 }: KabuchanIconProps) {
   const imagePath = `/kabuchan/kabuchan_${emotion}_touka.png`;
 
   return (

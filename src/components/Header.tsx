@@ -10,26 +10,32 @@ export default function Header() {
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      const formatted = now.toLocaleTimeString('ja-JP', {
+
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const date = String(now.getDate()).padStart(2, '0');
+      const timeStr = now.toLocaleTimeString('ja-JP', {
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
       });
+
+      const formatted = `${year}/${month}/${date} ${timeStr}`;
       setTime(formatted);
     };
 
-    updateTime(); // 初期表示
+    updateTime();
     const timer = setInterval(updateTime, 1000);
-
-    return () => clearInterval(timer); // クリーンアップ
+    return () => clearInterval(timer);
   }, []);
 
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.logo}>
-         ホームに戻る
+        ホームに戻る
       </Link>
       <div className={styles.clock}>{time}</div>
     </header>
   );
 }
+

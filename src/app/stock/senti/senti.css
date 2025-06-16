@@ -1,0 +1,38 @@
+.senti-container {
+  min-height: 100vh;
+  background-color: #c4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.senti-bubble {
+  background-color: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  border: 2px solid #333;
+}
+
+.senti-title {
+  font-size: 2rem; /* ← 大きくした */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.senti-loading,
+.senti-error,
+.senti-result {
+  font-size: 3rem;  /* ← 通常テキストも拡大 */
+  line-height: 2;
+}
+
+.senti-score {
+  color: red;
+  font-size: 7rem;
+  font-weight: bold;
+}

@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import styles from './OptionBubble.module.css';
+import { useRouter } from 'next/navigation';
 
 type Option = {
   label: string;
@@ -7,29 +10,35 @@ type Option = {
 };
 
 type Props = {
-  title: string;
+  title: React.ReactNode;
   options: Option[];
   backLink?: boolean;
+  children?: React.ReactNode;
 };
 
 
-export default function OptionBubble({ title, options ,backLink}: Props) {
+export default function OptionBubble({ title, options ,backLink,children}: Props) {
+  const router = useRouter();
   return (
     <div className={styles.bubble}>
       <p className={styles.title}>{title}</p>
-      <ul className={styles.optionList}>
-        {options.map((opt, i) => (
-          <li key={i}>
-            <Link href={opt.href} className={styles.link}>
-              {opt.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {options.length > 0 && (
+        <ul className={styles.optionList}>
+          {options.map((opt, i) => (
+            <li key={i}>
+              <Link href={opt.href} className={styles.link}>
+                {opt.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+      {children && <div className={styles.textContent}>{children}</div>}
 
        {backLink && (
-        <div className={styles.backLink}>
-          <Link href="/">← 戻る</Link>
+        <div className={styles.backLink}
+           onClick={() => router.back()}>
+      ← 戻る
         </div>
       )}
     

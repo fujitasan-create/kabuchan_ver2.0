@@ -1,0 +1,31 @@
+.forecast-result-container {
+  height: 100vh;
+  background-color: #c4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.forecast-result-row {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 10000px;
+}
+
+.forecast-result-message {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0000cc;
+  margin: 2rem 0 0 0;
+  white-space: pre-line;
+}
+
+.result-title {
+  max-width: 30ch; 
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}

@@ -4,6 +4,7 @@
   padding: 3rem;
   background: white;
   max-width: 1000px;
+  min-width: 500px;
   min-height: 500px;
   position: relative;
   font-size: 1.6rem;
@@ -58,6 +59,7 @@
   margin-top: 2rem;
   text-align: right;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .backLink a {

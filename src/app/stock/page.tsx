@@ -11,10 +11,10 @@ export default function StockPage() {
         <OptionBubble
           title="かぶちゃん：株についてだね〜 何が知りたい？"
           options={[
-            { label: '・上がるの？下がるの？（銘柄占い）', href: '/forecast' },
-            { label: '・グラフが見たい！', href: '/graph' },
-            { label: '・今日の市場の様子は？', href: '/news' },
-            { label: '・かぶちゃんに相談したい！（かぶチャット）', href: '/chat' },
+            { label: '・上がるの？下がるの？　（銘柄占い）', href: '/stock/forecast' },
+            { label: '・グラフが見たい！', href: '/stock/graph' },
+            { label: '・今日の市場の様子は？', href: '/stock/senti' },
+            { label: '・かぶちゃんに相談したい！（かぶチャット）', href: '/stock/chat' },
           ]}
           backLink={true}
         />

@@ -3,18 +3,15 @@
 import KabuchanIcon from '@/components/KabuchanIcon';
 import OptionBubble from '@/components/OptionBubble';
 
-export default function AboutPage() {
+export default function OthersPage() {
   return (
     <div style={styles.container}>
       <div style={styles.row}>
         <KabuchanIcon emotion="default" size={400} />
         <OptionBubble
-          title="かぶちゃん：かぶちゃんについてだね〜 何が知りたい？"
+          title="かぶちゃん：その他のことも聞いてみる？"
           options={[
-            { label: '・かぶちゃんって何者？', href: '/about/who' },
-            { label: '・どんなことができるの？', href: '/about/knowledge' },
-            { label: '・今後の機能追加予定は？', href: '/about/roadmap' },
-            { label: '・開発者について教えて！', href: '/about/dev' },
+            { label: '・お問い合わせはこちら！', href: '/others/contact' },
           ]}
           backLink={true}
         />
