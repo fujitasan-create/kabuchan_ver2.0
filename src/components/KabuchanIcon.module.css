@@ -18,3 +18,17 @@
   object-fit: cover;
   
 }
+
+@media (max-width: 768px) {
+  .circleWrapper {
+    width: 140px !important;
+    height: 140px !important;
+    border-width: 3px !important;
+  }
+
+  .iconImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

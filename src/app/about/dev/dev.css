@@ -1,0 +1,46 @@
+.dev-container {
+  height: 100vh;
+  background-color: #c4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.dev-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 1000px;
+}
+
+.dev-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* 外部リンク（青くて下線付き） */
+.dev-link {
+  font-weight: bold;
+  color: #0070f3;
+  text-decoration: underline;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .dev-container {
+    padding: 1rem;
+  }
+
+  .dev-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .dev-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

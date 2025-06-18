@@ -52,3 +52,21 @@ a {
   background-color: transparent;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .logo-fixed {    
+    left: 0;
+    top: 0;
+    margin: 4rem 5.5rem 0.5rem;
+    width: 240px;            
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    opacity: 0.5;            
+  }
+
+  .logo-fixed img {
+    width: 100%;
+    height: auto;
+  }
+}

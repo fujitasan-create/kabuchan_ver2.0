@@ -1,0 +1,27 @@
+.container {
+  background-color: #c4f6f9;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerRow {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* スマホ（768px以下）では縦並び＆サイズ調整 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .centerRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}

@@ -36,3 +36,36 @@
   font-size: 7rem;
   font-weight: bold;
 }
+
+
+@media (max-width: 768px) {
+  .senti-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .senti-bubble {
+    max-width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .senti-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .senti-loading,
+  .senti-error,
+  .senti-result {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .senti-score {
+    font-size: 4rem;
+    text-align: center;
+  }
+}

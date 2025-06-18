@@ -29,3 +29,25 @@
   overflow-wrap: break-word;
   white-space: normal;
 }
+
+@media (max-width: 768px) {
+  .forecast-result-container {
+    padding: 1rem;
+  }
+
+  .forecast-result-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .forecast-result-message {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .result-title {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}

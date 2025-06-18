@@ -1,0 +1,39 @@
+.knowledge-container {
+  min-height: 100vh;
+  background-color: #c4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 2rem 2rem;
+}
+
+.knowledge-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 1000px;
+}
+
+.knowledge-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .knowledge-container {
+    padding: 4rem 1rem 2rem;
+  }
+
+  .knowledge-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .knowledge-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

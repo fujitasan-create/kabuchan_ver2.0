@@ -1,12 +1,13 @@
 'use client';
 
+import styles from './about.module.css';
 import KabuchanIcon from '@/components/KabuchanIcon';
 import OptionBubble from '@/components/OptionBubble';
 
 export default function AboutPage() {
   return (
-    <div style={styles.container}>
-      <div style={styles.row}>
+    <div className={styles.container}>
+      <div className={styles.row}>
         <KabuchanIcon emotion="default" size={400} />
         <OptionBubble
           title="かぶちゃん：かぶちゃんについてだね〜 何が知りたい？"
@@ -22,18 +23,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
-const styles = {
-  container: {
-    height: '100vh',
-    backgroundColor: '#c4f6f9',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  row: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '4rem',
-  },
-};

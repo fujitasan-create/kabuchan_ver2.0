@@ -1,0 +1,142 @@
+/* 背景色とレイアウト */
+.forecast-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 100vh;
+  background-color: #c4f6f9; /* 背景色指定 */
+  padding: 2rem;
+}
+
+/* 入力ボックス内の全体（OptionBubble） */
+.bubble {
+  background: white;
+  border: 2px solid #222;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* タイトル */
+.title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* 入力フィールド */
+.forecast-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+/* 予測候補リスト */
+.forecast-suggestion {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.forecast-suggestion li {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.forecast-suggestion li:hover {
+  background-color: #eef;
+}
+
+/* チェックボックスとラジオボタンの並び */
+.checkboxGroup,
+.graphTypeSelect {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* ボタン */
+.forecast-button {
+  background-color: #00bcd4;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.forecast-button:hover {
+  background-color: #0097a7;
+}
+
+/* 戻るボタンの位置調整（OptionBubble内部） */
+.backLink {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.periodSelect {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.periodSelect label {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .forecast-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .bubble {
+    max-width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .forecast-input {
+    font-size: 0.95rem;
+  }
+
+  .checkboxGroup,
+  .graphTypeSelect,
+  .periodSelect {
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  .forecast-button {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .backLink {
+    font-size: 0.8rem;
+  }
+}

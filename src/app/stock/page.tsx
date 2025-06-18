@@ -2,11 +2,12 @@
 
 import KabuchanIcon from '@/components/KabuchanIcon';
 import OptionBubble from '@/components/OptionBubble';
+import styles from './stock.module.css';
 
 export default function StockPage() {
   return (
-    <div style={styles.container}>
-      <div style={styles.centerRow}>
+    <div className={styles.container}>
+      <div className={styles.centerRow}>
         <KabuchanIcon emotion="default" size={400} />
         <OptionBubble
           title="かぶちゃん：株についてだね〜 何が知りたい？"
@@ -22,18 +23,3 @@ export default function StockPage() {
     </div>
   );
 }
-
-const styles = {
-  container: {
-    backgroundColor: '#c4f6f9',
-    height: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  centerRow: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '4rem',
-  },
-};
