@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import KabuchanIcon from "@/components/KabuchanIcon";
@@ -51,7 +50,7 @@ export default function GraphDisplayPage() {
       <div className="graph-content">
         <OptionBubble title={"グラフと銘柄情報だよ〜！"} options={[]} backLink={true}>
           {imageUrl && (
-            <Image
+            <img
               src={imageUrl}
               alt="株価グラフ"
               width={1000}
@@ -76,3 +75,4 @@ export default function GraphDisplayPage() {
     </div>
   );
 }
+

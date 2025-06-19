@@ -29,7 +29,7 @@ export default function SentimentPage() {
         } else {
           throw new Error('Invalid response');
         }
-      } catch (e) {
+      } catch {
         setError(true);
       }
     };
