@@ -112,6 +112,7 @@
   .bubble {
     max-width: 90vw;
     padding: 1.5rem;
+    color: #111;
   }
 
   .title {

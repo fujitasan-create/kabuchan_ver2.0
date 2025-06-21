@@ -254,8 +254,18 @@ a.secondary {
 }
 
 @media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+  .body {
+    background-color: #111;
+    color: #eee;
+  }
+
+  .bubble {
+    background-color: #222;
+    color: #fff;
+  }
+
+  .logo img {
+    filter: invert(1);
   }
 }
 

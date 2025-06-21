@@ -39,8 +39,28 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  .bubble {
+    background-color: #222 !important;
+    color: #0e0e0e !important;
+    border-color: #444;
+  }
+
+  .title {
+    color: #0c0c0c !important;
+  }
+
+  .forecast-button {
+    background-color: #00bcd4;
+    color: #0b0b0b;
+  }
+
+  body {
+    background-color: #111 !important;
+    color: #0b0b0b !important;
+  }
+
+  .logo img {
+    filter: invert(1); /* ロゴ画像だけ反転させる */
   }
 }
 
@@ -48,7 +68,7 @@ a {
   position: absolute;
   top: 60px;
   left: 20px;
-  z-index: 999;
+  z-index: 0;
   background-color: transparent;
   cursor: pointer;
 }
