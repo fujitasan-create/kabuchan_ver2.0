@@ -60,7 +60,7 @@
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border: 1px solid #333;
-  background-color: #fff;
+  background-color: #0097a7;
   cursor: pointer;
   margin-top: 0.5rem;
   border-radius: 0.3rem;
@@ -82,4 +82,42 @@
   color: #555;
   margin-top: 1rem;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .forecast-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .forecast-bubble {
+    width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .forecast-suggestion {
+    width: 90vw;
+  }
+
+  .forecast-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .forecast-button {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .loading-message {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .forecast-result {
+    width: 90vw;
+    font-size: 1.4rem;
+    text-align: center;
+  }
 }

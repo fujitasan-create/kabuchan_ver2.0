@@ -16,12 +16,21 @@ type Props = {
   children?: React.ReactNode;
 };
 
-
-export default function OptionBubble({ title, options ,backLink,children}: Props) {
+export default function OptionBubble({ title, options, backLink, children }: Props) {
   const router = useRouter();
+
+  const handleBack = () => {
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push('/');
+    }
+  };
+
   return (
     <div className={styles.bubble}>
       <p className={styles.title}>{title}</p>
+
       {options.length > 0 && (
         <ul className={styles.optionList}>
           {options.map((opt, i) => (
@@ -33,15 +42,14 @@ export default function OptionBubble({ title, options ,backLink,children}: Props
           ))}
         </ul>
       )}
+
       {children && <div className={styles.textContent}>{children}</div>}
 
-       {backLink && (
-        <div className={styles.backLink}
-           onClick={() => router.back()}>
-      ← 戻る
+      {backLink && (
+        <div className={styles.backLink} onClick={handleBack}>
+          ← 戻る
         </div>
       )}
-    
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import KabuchanIcon from '@/components/KabuchanIcon';
 import OptionBubble from '@/components/OptionBubble';
+import Link from 'next/link';
 import './forecast.css';
 
 type StockSuggestion = {
@@ -99,6 +100,14 @@ export default function ForecastPage() {
             予想してもらう！
           </button>
         )}
+
+        <div style={{ marginTop: '12px' }}>
+          <Link href="/stock/forecast/what_fc">
+          <span style={{ fontSize: '0.9rem', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>
+            銘柄占いとは？
+          </span>
+          </Link>
+        </div>
       </OptionBubble>
     </div>
   );

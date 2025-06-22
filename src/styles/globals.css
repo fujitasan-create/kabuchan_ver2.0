@@ -90,3 +90,22 @@ a {
     height: auto;
   }
 }
+
+.ad-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #c4f6f9;
+  z-index: 9999;
+  padding: 8px 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .ad-bottom {
+    transform: scale(0.5);   /* 80%に縮小 */
+    transform-origin: bottom center;
+  }
+}

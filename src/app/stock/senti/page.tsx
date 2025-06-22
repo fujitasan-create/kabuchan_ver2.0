@@ -57,7 +57,21 @@ export default function SentimentPage() {
             {messageMap[score]}
           </p>
         )}
-      </OptionBubble>
-    </div>
+
+        <div style={{ marginTop: '1.2rem', textAlign: 'left' }}>
+          <a
+            href="/stock/senti/what_st"
+            style={{
+              fontSize: '0.9rem',
+              color: 'blue',
+              textDecoration: 'underline',
+              cursor: 'pointer',
+                  }}
+              >
+            市場の様子とは？
+          </a>
+      </div>
+        </OptionBubble>
+      </div>
   );
 }

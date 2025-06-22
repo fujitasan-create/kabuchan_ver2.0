@@ -6,8 +6,10 @@ import Script from "next/script";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import AdBottom from "@/components/AdBottom";
 import { GA_TRACKING_ID } from "@/lib/gtag";
 import { Suspense } from 'react'; 
+import ReloadAlert from '@/components/ReloadAlert';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +39,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>
-
+        <ReloadAlert />
         <Header />
         <div className="logo-fixed">
           <Link href="/" passHref>
@@ -51,6 +53,7 @@ export default function RootLayout({
         </div>
         <main>{children}</main>
         <Footer />
+        <AdBottom />
 
         <Script
           strategy="afterInteractive"
