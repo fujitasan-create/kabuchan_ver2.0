@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📈 株価予測アプリ「かぶちゃん」ver.2.0
 
-## Getting Started
+![kabuchan-logo](./public/kabuchan/logo.png)  
+投資初心者でも楽しく使える、ゆるキャラAI「かぶちゃん」による株価予測Webアプリです。
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+##  概要
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+「かぶちゃん」は、銘柄コードを入力するだけで、  
+機械学習モデルにより**翌営業日の株価が上昇する確率**を予測してくれるアプリです。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+予測結果に応じて、キャラクター「かぶちゃん」の表情や吹き出しが変化し、  
+グラフやメッセージを通して視覚的に楽しく情報が得られるようになっています。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+##  主な機能
 
-To learn more about Next.js, take a look at the following resources:
+-  銘柄検索（予測補完付き）
+-  株価グラフ表示（ローソク足／ライン、テクニカル指標選択可）
+-  機械学習による株価上昇確率の予測（GradientBoostingClassifier）
+-  感情スコアに応じた「かぶちゃん」の表情変化（ニュース分析）
+-  OpenAIと連携したAIチャット機能（開発中）
+-  お問い合わせフォーム（FastAPI＋PostgreSQL）
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##  使用技術
 
-## Deploy on Vercel
+### フロントエンド
+- [Next.js](https://nextjs.org/)
+- TypeScript / CSS Modules
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### バックエンド（FastAPI）
+- `FastAPI` / `uvicorn`
+- `yfinance`, `pandas`, `numpy`
+- `scikit-learn`, `matplotlib`, `mplfinance`
+- `Mecab`
+
+### インフラ・デプロイ
+- [Render](https://render.com/)（API・DBホスティング）
+- AWS（S3, CloudFront, Route53）
+- PostgreSQL（問い合わせフォームDB）
+
+
+---
+
+## デプロイ先（公開中）
+
+-  Webアプリ本体: [https://www.kabuchan-app.click](https://www.kabuchan-app.click)
+-  グラフAPI: `https://my-api-h54h.onrender.com/plot/plot`
+-  感情スコアAPI: `https://my-api-h54h.onrender.com/sentiment/analyze-yahoo-business`
+
+※全てのAPIはRender上でホスティングされています。
+
+---
+
+##  開発経緯
+
+ver.1.0ではフロントエンドとバックエンドが一体化した構成で、保守性や拡張性に課題がありました。  
+今回のver.2.0ではAPI化とフロント分離により、機能の追加やスマホアプリへの展開も見据えた構成に刷新しました。
+
+---
+
+##  今後の予定
+
+- React Nativeでのスマホアプリ版リリース
+- 有料ユーザー向けに高精度モデル（GPT-4など）の導入
+- 匿名掲示板機能の追加（投資意見の共有）
+- LINE通知連携やアラート機能の追加
+
+---
