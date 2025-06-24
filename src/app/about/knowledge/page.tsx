@@ -1,5 +1,6 @@
 'use client';
 
+
 import './knowledge.css';
 import KabuchanIcon from '@/components/KabuchanIcon';
 import OptionBubble from '@/components/OptionBubble';
@@ -14,7 +15,7 @@ export default function AboutKnowledgePage() {
             かぶちゃんは、株に興味を持ち始めた人たちが安心して投資を始められるように、いろんな知識と機能を身につけてるんだ〜。
           </p>
           <p className="knowledge-text">
-            まず、日本に上場している<strong>4,412銘柄すべて</strong>に対応していて、それぞれの銘柄について、現在の株価やPER、時価総額などの基本情報を調べてお伝えできるよ。
+            まず、<strong>日本に上場している4,412銘柄すべて、そしてS&P500構成銘柄</strong>に対応していて、それぞれの銘柄について、現在の株価やPER、時価総額などの基本情報を調べてお伝えできるよ。
           </p>
           <p className="knowledge-text">
             株価のグラフを描くことも得意なんだ。<strong>ローソク足はもちろん、RSI、MACD、ボリンジャーバンドといったテクニカル指標も表示できる</strong>から、視覚的に分析したい人にも役立ててもらえると思うよ！

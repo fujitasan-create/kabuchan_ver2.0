@@ -1,0 +1,15 @@
+.ad-left {
+  position: fixed;
+  top: 150px; 
+  left: 0;
+  width: 160px;
+  height: 600px;
+  z-index: 999;
+}
+
+/* スマホでは非表示 */
+@media (max-width: 768px) {
+  .ad-left {
+    display: none;
+  }
+}

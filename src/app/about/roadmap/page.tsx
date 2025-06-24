@@ -1,5 +1,6 @@
 'use client';
 
+
 import './roadmap.css';
 import KabuchanIcon from '@/components/KabuchanIcon';
 import OptionBubble from '@/components/OptionBubble';

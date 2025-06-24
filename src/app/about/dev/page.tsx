@@ -4,6 +4,7 @@ import './dev.css';
 import KabuchanIcon from '@/components/KabuchanIcon';
 import OptionBubble from '@/components/OptionBubble';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function AboutDevPage() {
   return (
@@ -30,5 +31,6 @@ export default function AboutDevPage() {
         </OptionBubble>
       </div>
     </div>
+    
   );
 }

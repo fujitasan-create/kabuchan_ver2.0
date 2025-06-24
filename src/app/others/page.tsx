@@ -1,12 +1,14 @@
 'use client';
 
+import './others.css'; 
+
 import KabuchanIcon from '@/components/KabuchanIcon';
 import OptionBubble from '@/components/OptionBubble';
 
 export default function OthersPage() {
   return (
-    <div style={styles.container}>
-      <div style={styles.row}>
+    <div className="others-container">
+      <div className="others-row">
         <KabuchanIcon emotion="default" size={400} />
         <OptionBubble
           title="かぶちゃん：その他のことも聞いてみる？"
@@ -19,18 +21,3 @@ export default function OthersPage() {
     </div>
   );
 }
-
-const styles = {
-  container: {
-    height: '100vh',
-    backgroundColor: '#c4f6f9',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  row: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '4rem',
-  },
-};

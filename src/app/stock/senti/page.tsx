@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import KabuchanIcon from '@/components/KabuchanIcon';
 import OptionBubble from '@/components/OptionBubble';
+import Link from 'next/link';
 import './senti.css';
 
 export default function SentimentPage() {
@@ -59,17 +60,18 @@ export default function SentimentPage() {
         )}
 
         <div style={{ marginTop: '1.2rem', textAlign: 'left' }}>
-          <a
-            href="/stock/senti/what_st"
-            style={{
-              fontSize: '0.9rem',
-              color: 'blue',
-              textDecoration: 'underline',
-              cursor: 'pointer',
-                  }}
-              >
-            市場の様子とは？
-          </a>
+          <Link href="/stock/senti/what_st">
+          <span
+          style={{
+          fontSize: '0.9rem',
+          color: 'blue',
+          textDecoration: 'underline',
+          cursor: 'pointer',
+        }}
+          >
+          市場の様子とは？
+          </span>
+          </Link>
       </div>
         </OptionBubble>
       </div>
