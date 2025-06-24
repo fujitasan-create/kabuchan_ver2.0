@@ -50,8 +50,6 @@
 ## デプロイ先（公開中）
 
 -  Webアプリ本体: [https://www.kabuchan-app.click](https://www.kabuchan-app.click)
--  グラフAPI: `https://my-api-h54h.onrender.com/plot/plot`
--  感情スコアAPI: `https://my-api-h54h.onrender.com/sentiment/analyze-yahoo-business`
 
 ※全てのAPIはRender上でホスティングされています。
 
