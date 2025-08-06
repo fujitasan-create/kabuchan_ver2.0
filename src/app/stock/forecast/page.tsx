@@ -56,21 +56,27 @@ export default function ForecastPage() {
 
     setIsLoading(true);
 
-    try {
-      const res = await fetch(
-        `https://my-api-h54h.onrender.com/ml/predict?ticker=${selected.code}`
-      );
-      const data = await res.json(); // ← { prediction: "上がる", probability: 0.65, ... }
+    const endpointMap = {
+      '1d': 'predict',
+      '5d': 'predict-5d',
+      '20d': 'predict-20d',
+    };
 
-      router.push(
-        `/stock/forecast/result?name=${encodeURIComponent(selected.name)}&prediction=${encodeURIComponent(data.prediction)}`
-      );
-    } catch (err) {
-      console.error('予想リクエストに失敗しました', err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    try {
+    const res = await fetch(
+      `https://my-api-h54h.onrender.com/ml/${endpointMap[forecastPeriod]}?ticker=${selected.code}`
+    );
+    const data = await res.json();
+
+    router.push(
+      `/stock/forecast/result?name=${encodeURIComponent(selected.name)}&prediction=${encodeURIComponent(data.prediction)}`
+    );
+  } catch (err) {
+    console.error('予想リクエストに失敗しました', err);
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   return (
     <div className="forecast-container">

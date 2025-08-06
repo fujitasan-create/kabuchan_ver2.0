@@ -13,8 +13,8 @@ export default function ForecastResultPage() {
   const isUp = prediction === '上がる';
   const emotion = isUp ? 'happy' : 'sad';
   const message = isUp
-    ? '明日は上がるかも〜！😆'
-    : 'うーん...明日は上がらなそう🥺';
+    ? '上がるかも〜！😆'
+    : 'うーん...上がらなそう🥺';
 
   return (
     <div className="forecast-result-container">
