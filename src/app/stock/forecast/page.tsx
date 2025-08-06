@@ -16,6 +16,7 @@ export default function ForecastPage() {
   const [input, setInput] = useState('');
   const [suggestions, setSuggestions] = useState<StockSuggestion[]>([]);
   const [selected, setSelected] = useState<StockSuggestion | null>(null);
+  const [forecastPeriod, setForecastPeriod] = useState<'1d' | '5d' | '20d'>('1d');
   const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
@@ -92,6 +93,39 @@ export default function ForecastPage() {
             ))}
           </ul>
         )}
+
+        <div className="forecast-period-box">
+          <label>
+            <input
+              type="radio"
+              name="forecast-period"
+              value="1d"
+              checked={forecastPeriod === '1d'}
+              onChange={() => setForecastPeriod('1d')}
+            />
+            明日
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="forecast-period"
+              value="5d"
+              checked={forecastPeriod === '5d'}
+              onChange={() => setForecastPeriod('5d')}
+            />
+            1週間後
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="forecast-period"
+              value="20d"
+              checked={forecastPeriod === '20d'}
+              onChange={() => setForecastPeriod('20d')}
+            />
+            1か月後
+          </label>
+        </div>
 
         {isLoading ? (
           <p className="loading-message">かぶちゃんが予想中だよ…🔄</p>
