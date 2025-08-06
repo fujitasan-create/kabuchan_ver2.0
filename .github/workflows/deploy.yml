@@ -1,0 +1,44 @@
+name: Deploy Kabuchan App
+
+on:
+  push:
+    branches:
+      - main  # または deploy 用のブランチ名
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ソースコードを取得
+        uses: actions/checkout@v3
+
+      - name: Node.js をセットアップ
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: パッケージをインストール
+        run: npm install
+
+      - name: ビルド
+        run: npm run build
+
+      - name: S3 にアップロード
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --delete
+        env:
+          AWS_S3_BUCKET: kabuchan-app
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ap-northeast-1
+          SOURCE_DIR: out
+
+      - name: CloudFront キャッシュを削除
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          DISTRIBUTION: E3012CPHKBTOC5
+          PATHS: "/*"
