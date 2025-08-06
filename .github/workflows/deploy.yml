@@ -25,7 +25,6 @@ jobs:
     - name: Build & Export
       run: |
         npm run build           # .next を生成
-        npx next export         # ← これが無いと out/ ができない
 
     # 5. S3 へ同期
     - name: Upload to S3
