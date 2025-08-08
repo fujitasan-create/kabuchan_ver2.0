@@ -54,7 +54,7 @@ export default function GraphDisplayPage() {
               src={imageUrl}
               alt="株価グラフ"
               width={1000}
-              height={700}
+              height={500}
               className="graph-image"
             />
           )}
